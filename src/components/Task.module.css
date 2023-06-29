@@ -1,0 +1,26 @@
+.taskBox{
+    background: var(--gray-400);
+    
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10PX;
+}
+.taskBox p{
+    color: var(--gray-100);
+    font-size: 14px;
+}
+.taskBox button{
+    background: transparent;
+    border: 0;
+    color: var(--gray-300);
+    cursor: pointer;
+    line-height: 0;
+    border-radius: 2px;
+}
+.taskBox button:hover{
+    color: var(--danger);
+}

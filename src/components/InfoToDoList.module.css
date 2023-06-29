@@ -1,0 +1,25 @@
+.todoList {
+  
+    width: 80%;
+    margin: 65px auto 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.todoList span {
+    padding: 2px 8px;
+    background: var(--gray-400);
+    color: var(--gray-200);
+    border-radius:50px;
+    margin-left: 8px;
+}
+.createdTasks{
+    color: var(--blue);
+}
+.completedTasks{
+    color: var(--purple);
+}
