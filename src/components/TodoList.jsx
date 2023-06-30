@@ -26,31 +26,13 @@ export function TodoList() {
             title: "Nova tarefa 2",
             isComplit: false
         },
-        {
-            id: uuidv4(),
-            title: "Nova tarefa 2",
-            isComplit: false
-        },
-        {
-            id: uuidv4(),
-            title: "Nova tarefa 2",
-            isComplit: true
-        },
-        {
-            id: uuidv4(),
-            title: "Nova tarefa 2",
-            isComplit: true
-        },
+       
+
     ])
 
 
     const [newTask, setNewTask] = useState('')
     console.log(newTask);
-
-    // const countCompletedTasks = () => {
-    //     const completedTasks = tasks.filter(task => task.isComplit === true);
-    //     return completedTasks.length;
-    // }
 
     function countCompletedTasks() {
         const completedTasks = tasks.filter(task => task.isComplit === true);
@@ -104,11 +86,12 @@ export function TodoList() {
             return task;
         });
         setTasks(updatedTasks);
-       
-        const completedTasks = tasks.filter(task => {
-            return task.isComplit === true && task.id !== taskToCheckOrNot;
+        console.log(updatedTasks)
+        
+        const completedTasks = updatedTasks.filter(task => {
+            return task.isComplit === true;
         })
-
+    
         setTotalTesksComplit(completedTasks.length)
     }
 

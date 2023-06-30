@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import style from './Task.module.css'
-import { CheckCircle,Circle, Trash } from 'phosphor-react'
+import { CheckCircle, Circle, Trash } from 'phosphor-react'
 
-export function Task({idtask,title,isComplit,onDeleteTask,onCheckComplitOrNotTask}) {
-    
+export function Task({ idtask, title, isComplit, onDeleteTask, onCheckComplitOrNotTask }) {
+
     const [iconWeight, setIconWeight] = useState('regular')
     const [iconWeightFill, setIconWeightFill] = useState('fill')
     const [iconColorChecked, setIconColorChecked] = useState('#4EA8DE')
@@ -17,30 +17,28 @@ export function Task({idtask,title,isComplit,onDeleteTask,onCheckComplitOrNotTas
         setIconColorChecked('#4EA8DE')
     }
 
-    function handleDeleteTask(){
+    function handleDeleteTask() {
         console.log(`Deletei o ${idtask}`);
         onDeleteTask(idtask)
     }
-    function handleCheckComplitOrNotTask(){
+    function handleCheckComplitOrNotTask() {
         onCheckComplitOrNotTask(idtask)
     }
 
     function checkedComplit(condicao) {
         if (condicao) {
-          return <CheckCircle size={24} weight={iconWeightFill} color={iconColorChecked} />;
+            return <CheckCircle size={24} weight={iconWeightFill} color={iconColorChecked} />;
         } else {
-          return <Circle size={24} weight={iconWeight} color={iconColorChecked} />;
+            return <Circle size={24} weight={iconWeight} color={iconColorChecked} />;
         }
-      }
+    }
 
     return (
         <>
             <div className={style.taskBox}>
 
                 <button onClick={handleCheckComplitOrNotTask} onMouseOver={handleMouseHover} onMouseLeave={handleMouseLeave}>
-                    
-                {checkedComplit(isComplit)}
-                    
+                    {checkedComplit(isComplit)}
                 </button>
                 <p>{title}</p>
                 <button onClick={handleDeleteTask}>
