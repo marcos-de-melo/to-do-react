@@ -1,6 +1,6 @@
 import style from './App.module.css'
 import { Header } from './components/Header'
-import { InfoToDoList } from './components/InfoTodoList'
+
 import { TodoList } from './components/TodoList'
 
 
@@ -14,7 +14,7 @@ function App() {
     <>
       <Header/>
       <main>
-        <InfoToDoList/>
+        
        <TodoList/> 
 
       </main>
